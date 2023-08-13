@@ -114,7 +114,7 @@ class App extends Component {
   //     },
   //     body: raw
   // };
-        fetch("http://localhost:3500/imageurl", {
+        fetch("https://face-recognition-api-5adn.onrender.com/imageurl", {
           method:'post',
           headers:{'Content-Type':'application/json'},
           body: JSON.stringify({
@@ -124,7 +124,7 @@ class App extends Component {
         .then(response => response.json())
         .then(result => {
           if (result.status && result.status.description === 'Ok') {
-            fetch("http://localhost:3500/image", {
+            fetch("https://face-recognition-api-5adn.onrender.com/image", {
               method:'put',
               headers:{'Content-Type':'application/json'},
               body: JSON.stringify({
